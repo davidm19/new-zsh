@@ -11,19 +11,8 @@ if [[ ! -e "/usr/bin/zsh" ]] || [[ ! -e "/usr/local/bin/zsh" ]]; then
 	exit 1
 fi
 
-# Download necessary files and create necessary locations
-curl -o $HOME/.git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
-curl -o $HOME/.git-completion.zsh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh
-
-if [[ ! -d "$HOME/.zsh/" ]]; then
-	mkdir $HOME/.zsh
-fi
-
-if [[ ! -d "$HOME/.zsh/_git" ]]; then
-	mkdir $HOME/.zsh/_git
-fi
-
-cp $HOME/.git-completion.zsh $HOME/.zsh/_git
+# Copy new zshrc to to the user's home directory
+cp zshrc ~/.zshrc
 
 # Change current user's shell
 chsh -s $(which zsh)
