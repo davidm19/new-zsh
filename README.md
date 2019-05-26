@@ -1,5 +1,3 @@
-# I'm putting this on the backburner for now, as the git-prompt doesn't show unstaged/staged changes at all.
+# New-ZSH
 
-### dependencies:
-* git-completion.zsh (needs to be placed in the ~/.zsh/_git directory)
-* git-prompt.sh
+Just a script that bootstraps an easy, informative, and attractive zsh prompt for the user. Use it if you want, or don't use it if you don't want, I couldn't care less.
